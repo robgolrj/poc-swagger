@@ -28,10 +28,10 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Exemplo de Titulo")
+                .title("Exemplo de Titulo no meu Swagger UI")
                 .description("Descrição Spring REST Sample com Swagger")
                 .termsOfServiceUrl("http://seriaMeuTerno.se.tivesse")
-                .contact("Fulano de Tal")
+                .contact("Empresa de Fulano de Tal")
                 .license("Apache License Version 2.0")
                 .licenseUrl("http://minha.licenca/LICENSE")
                 .version("2.0")
