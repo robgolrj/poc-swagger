@@ -21,7 +21,7 @@ public class SwaggerConfig {
                 .groupName("orgao-api")
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.any())
+                .apis(RequestHandlerSelectors.basePackage("com.example.rest"))
                 .paths(PathSelectors.any())
                 .build();
     }
