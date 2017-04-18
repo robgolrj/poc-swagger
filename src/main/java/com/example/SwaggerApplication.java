@@ -20,14 +20,4 @@ public class SwaggerApplication {
 		SpringApplication.run(SwaggerApplication.class, args);
 	}
 
-	/*@Bean
-	public Docket newsApi() {
-		return new Docket(DocumentationType.SWAGGER_2)
-				.groupName("greetings")
-				.apiInfo(apiInfo())
-				.select()
-				.paths(regex("/exemplo.*"))
-				.build();
-	}*/
-
 }
