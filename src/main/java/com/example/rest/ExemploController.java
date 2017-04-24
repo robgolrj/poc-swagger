@@ -7,11 +7,16 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+@Api
 @RestController
 public class ExemploController {
 
     @RequestMapping(method = RequestMethod.GET, path = "/exemplo", produces = "application/jason")
-    @ApiOperation(value = "getExemplo", nickname = "getExemplo")
+    @ApiOperation(value = "getExemplo", nickname = "getExemplo",
+    notes = "Critério de aceitação" +
+            " \t\n1 - Primeira opção" +
+            " \t\n2 - Segunda opção" +
+            " \t\n3 - Terceira opção" )
     @ApiImplicitParams({
             @ApiImplicitParam(name = "nome", value = "Nome de alguem", required = false, dataType = "string", paramType = "query", defaultValue="Fulano")
     })
@@ -39,7 +44,7 @@ public class ExemploController {
 
     @RequestMapping(value = "/exemplo/{id}", method = RequestMethod.POST)
     @ApiOperation(value = "Atualiza Nome", notes = "Atualiza um nome")
-    public String update(@RequestBody String novoNome) {
+    public String update(@ApiParam(value = "Novo Nome") @RequestBody String novoNome) {
         return "Fulano";
     }
 }

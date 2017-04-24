@@ -1,7 +1,14 @@
 package com.example;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
+@ApiModel(value = "Pessoa")
 public class Pessoa {
+
+    @ApiModelProperty(value = "Nome ", required=true)
     private String nome;
+
     private int idade;
 
     public String getNome() {
